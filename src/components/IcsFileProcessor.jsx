@@ -49,7 +49,7 @@ function IcsFileProcessor() {
 
     const downloadNewFile = () => {
         const newContent = newLines.join('\n');
-        const blob = new Blob([newContent], { type: 'text/plain' });
+        const blob = new Blob([newContent], { type: 'text/calendar;charset=utf-8' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = 'new.ics';
