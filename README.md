@@ -5,8 +5,7 @@ JSOSowy ICS pozwala zmienić plik kalendarzowy z USOS'a na format podobny z JSOS
 
 ## Sposób użycia:
 1. Wejdź na stronę [https://chavoniasty.github.io/JSOSowyICS/](https://chavoniasty.github.io/JSOSowyICS/)
-1. Pobierz plik .ics z USOS'a
-2. Wczytaj plik .ics do aplikacji
+1. Wklej link do swojego pliku .ics z USOS'a lub wgraj plik ręcznie
 3. Pobierz nowy plik .ics
 4. Wgraj nowy plik .ics do swojego kalendarza
 5. Gotowe!
