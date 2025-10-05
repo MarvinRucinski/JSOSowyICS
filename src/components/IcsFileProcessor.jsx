@@ -3,6 +3,7 @@ import { FileInput, Label } from 'flowbite-react';
 
 function IcsFileProcessor() {
     const [newLines, setNewLines] = useState([]);
+    const [linkInput, setLinkInput] = useState('');
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -56,8 +57,25 @@ function IcsFileProcessor() {
         link.click();
     };
 
+    const fetchIcsFromLink = async () => {
+        if (!linkInput) return;
+        try {
+            const response = await fetch(linkInput);
+            if (!response.ok) throw new Error('Network response was not ok');
+            const fileContent = await response.text();
+            processFile(fileContent);
+        } catch (error) {
+            console.error('Error fetching the .ics file:', error);
+        }
+    };
+
     return (
-        <div className="lg:w-1/2 lg:h-full lg:flex lg:flex-col lg:items-center lg:justify-center lg:bg-white lg:p-4 lg:border-violet-300 lg:border-2 lg:rounded-md">
+        <div className="lg:w-1/2 lg:h-full flex flex-col items-center justify-center lg:bg-white lg:p-4 lg:border-violet-300 lg:border-2 lg:rounded-md ">
+            <div className="font-bold text-sm mb-0 w-full flex flex-row items-center justify-center">
+                <input type="text" className='border-2 border-violet-300 rounded-md p-1 w-full text-center' placeholder='Wklej link do pliku .ics tutaj' onChange={e => setLinkInput(e.target.value)} ></input>
+                {linkInput && <button className='bg-violet-500 text-white font-bold p-1 ml-2 rounded-md hover:bg-violet-600' onClick={fetchIcsFromLink}>Wczytaj</button>}
+            </div>
+            <span className='text-sm text-gray-500'> lub</span>
             <div className="flex w-full items-center justify-center lg:h-2/3">
                 <Label
                     htmlFor="dropzone-file"
