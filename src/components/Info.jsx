@@ -12,11 +12,10 @@ function Info() {
             <div className="bg-white border-2 border-violet-300 rounded-md p-2 my-2 lg:w-4/5 lg:p-6 lg:mb-0">
                 <h2 className="text-violet-500 font-bold text-xl">Sposób użycia:</h2>
                 <span>
-                    1. Pobierz plik .ics z USOS'a<br />
-                    2. Wczytaj plik .ics do aplikacji<br />
-                    3. Pobierz nowy plik .ics<br />
-                    4. Wgraj nowy plik .ics do swojego kalendarza<br />
-                    5. Gotowe!
+                    1. Wklej link do swojego pliku .ics z USOS'a lub wgraj plik ręcznie<br />
+                    2. Pobierz nowy plik .ics<br />
+                    3. Wgraj nowy plik .ics do swojego kalendarza<br />
+                    4. Gotowe!
                 </span>
             </div>
         </div>
