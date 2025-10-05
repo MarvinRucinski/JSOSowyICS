@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="flex flex-col w-full h-full justify-between lg:items-center">
         <div className="w-full">
-          <div className="flex flex-row items-start lg:absolute lg:left-4 lg:top-2">
+          <div className="flex flex-row items-start absolute left-4 top-2">
             <h1 className="text-3xl font-bold text-violet-500">JSOSowy ICS</h1>
           </div>
         </div>
